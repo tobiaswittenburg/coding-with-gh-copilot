@@ -4,13 +4,13 @@
     <title>HELLO STU OFFSITE</title>
     <style>
       body {
-        background-color: pink;
         color: #fff;
         font-family: Arial, sans-serif;
         font-size: 16px;
         line-height: 1.5;
         margin: 0;
         padding: 0;
+        background: linear-gradient(to right, red , yellow);
       }
       h1 {
         font-size: 48px;
@@ -30,6 +30,18 @@
         display: block;
         margin: auto;
       }
+      button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
       @keyframes blink {
         0% {
           text-shadow: 2px 2px #ff00ff;
@@ -47,6 +59,27 @@
     <h1>HELLO STU OFFSITE</h1>
     <p>Welcome to the GH Copilot hands-on!</p>
     <img src="./images/clippy.gif" alt="Clippy">
+    <button id="myButton" type="button">Click me!</button>
+    <div id="myNumber">1234</div>
+
+    <script>
+      // Get references to the button and div
+      var button = document.getElementById('myButton');
+      var numberDiv = document.getElementById('myNumber');
+    
+      // Add a click event listener to the button
+      button.addEventListener('click', function() {
+        // Get the current number from the div and convert it to an integer
+        var currentNumber = parseInt(numberDiv.textContent, 10);
+    
+        // Increase the number
+        currentNumber++;
+    
+        // Update the div with the new number
+        numberDiv.textContent = currentNumber;
+      });
+    </script>
+    
   </body>
 </html>
 
